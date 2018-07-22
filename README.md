@@ -3,6 +3,10 @@ I'm working with the PDFBox Java library and encountered the following different
 
 The code in this repository works fine in Lucee (generating a new PDF in the output folder).
 
+___
+### The issue outlined here was resolved. Within ACF, you need to call `init()` on the `baos` object, like so: `baos = createObject( 'java', 'java.io.ByteArrayOutputStream' ).init();`. The code then works with both engines.
+___
+
 In ACF, it throws an error: "No output specified "
 
 ```cfc
